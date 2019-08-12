@@ -1,0 +1,43 @@
+<ion-content>
+    <div class="top-triangle"></div>
+    <div class="bottom-triangle"></div>
+    <nav class="navbar">
+        <ion-button class="abarras-menu" (click)="navigate('menu')" shape="round" fill="outline"
+            [ngClass]="{'active': currentRoute == 'menu'}">
+        </ion-button>
+
+        <div class="abarras-icon"></div>
+        <ion-button class="abarras-status" shape="round" size="small">{{statusText}}</ion-button>
+    </nav>
+    <section class="main">
+        <nav class="sub-navbar">
+            <ul>
+                <li (click)="navigate('store')">
+                    <ion-button shape="round" fill="outline" [ngClass]="{'active': currentRoute == 'store'}">
+                    </ion-button>
+                    Tienda
+                </li>
+                <li (click)="navigate('client')">
+                    <ion-button shape="round" fill="outline" [ngClass]="{'active': currentRoute == 'client'}">
+                    </ion-button>
+                    Clientes
+                </li>
+                <li (click)="navigate('stats')">
+                    <ion-button shape="round" fill="outline" [ngClass]="{'active': currentRoute == 'stats'}">
+                    </ion-button>
+                    Estadisticas
+                </li>
+                <li (click)="navigate('sell')">
+                    <ion-button shape="round" fill="outline" [ngClass]="{'active': currentRoute == 'sell'}">
+                    </ion-button>
+                    Ventas
+                </li>
+            </ul>
+        </nav>
+        <ion-router-outlet name="home" *ngIf="!loadingTab"></ion-router-outlet>
+        <app-loading *ngIf="loadingTab"></app-loading>
+    </section>
+    <div class="bottom">
+        <ion-button shape="round" fill="outline">Iniciar una venta</ion-button>
+    </div>
+</ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "abarras",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

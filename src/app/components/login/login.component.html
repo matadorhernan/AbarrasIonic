@@ -1,0 +1,17 @@
+<ion-content scrollY=false>
+    <div class="top-triangle"></div>
+    <div class="bottom-triangle"></div>
+    <form [formGroup]="formLogin">
+        <div class="logo"></div>
+        <ion-item lines="none">
+            <ion-input type="text" formControlName="username" placeholder="Escribe tu email"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-input type="password" formControlName="password" placeholder="Escribe tu contraseña"></ion-input>
+        </ion-item>
+        <ion-button shape="round" type="submit" [disabled]="!formLogin.valid" (click)="sendLogin()">{{loginButtonText}}
+        </ion-button>
+        <ion-button shape="round" fill="outline">Crear una cuenta</ion-button>
+        <ion-button fill="clear">Olvidaste tu contraseña?</ion-button>
+    </form>
+</ion-content>

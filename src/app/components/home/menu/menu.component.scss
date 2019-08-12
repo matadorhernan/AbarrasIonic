@@ -1,0 +1,35 @@
+div.menu {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: 0 30px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	h2 {
+		color: white;
+		font-size: 15px;
+		padding-bottom: 15px;
+	}
+
+	ion-button.option-item {
+		width: 100%;
+		--border-radius: 5px;
+		--border-color: transparent;
+		--background: #1C2427;
+		--color: white;
+	}
+
+	ion-button.loggout {
+		width: 100%;
+		--border-radius: 5px;
+		--border-color: transparent;
+		--background: #05c7f2;
+		--box-shadow: 0 0 60px 10px #05c7f263;
+		--background: linear-gradient(45deg, #05c7f2, #0ca0ef);
+		--color: white;
+	}
+}
