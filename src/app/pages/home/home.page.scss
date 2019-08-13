@@ -46,7 +46,7 @@ ion-content {
 			background-repeat: no-repeat;
 			background-position: center;
 
-			transition: .3s;
+			transition: 0.3s;
 		}
 
 		.abarras-menu.active {
@@ -110,11 +110,39 @@ ion-content {
 				height: 60px;
 				width: 60px;
 				border-radius: 50%;
+				position: relative;
+
+				i {
+					position: absolute;
+					display: block;
+					height: 30px;
+					width: 30px;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: contain;
+					opacity: 0.3;
+				}
+				.abarras-store {
+					background-image: url(/assets/icon/store.svg);
+				}
+				.abarras-client {
+					background-image: url(/assets/icon/client.svg);
+				}
+				.abarras-stats {
+					background-image: url(/assets/icon/stats.svg);
+				}
+				.abarras-sell {
+					background-image: url(/assets/icon/sell.svg);
+				}
 			}
+
 			ion-button.active {
 				background-color: #344248;
 				border: 2px solid #0d9def;
 				box-shadow: 0 0 60px 10px #05c7f263;
+				i {
+					opacity: 1;
+				}
 			}
 		}
 

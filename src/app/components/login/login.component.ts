@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from '../../services/auth/auth.service';
 import { StorageService } from '../../services/storage/storage.service';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-login',
@@ -11,7 +12,8 @@ import { StorageService } from '../../services/storage/storage.service';
 export class LoginComponent implements OnInit {
 	constructor(
 		private authService: AuthService,
-		private storageService: StorageService
+		private storageService: StorageService,
+		private router:Router
 	) {}
 
 	public formLogin: FormGroup;
@@ -45,6 +47,7 @@ export class LoginComponent implements OnInit {
 				login => {
 					this.storageService.setStorage('abarras_user', JSON.stringify(login.user));
 					this.authService.loggedIn.next(true);
+					this.router.navigateByUrl('/home/(home:store)');
 				},
 				error => {
 					this.loginButtonText = 'Login Incorrecto';

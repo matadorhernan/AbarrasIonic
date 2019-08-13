@@ -14,21 +14,25 @@
             <ul>
                 <li (click)="navigate('store')">
                     <ion-button shape="round" fill="outline" [ngClass]="{'active': currentRoute == 'store'}">
+                         <i class="abarras-store"></i>
                     </ion-button>
                     Tienda
                 </li>
                 <li (click)="navigate('client')">
                     <ion-button shape="round" fill="outline" [ngClass]="{'active': currentRoute == 'client'}">
+                         <i class="abarras-client"></i>
                     </ion-button>
                     Clientes
                 </li>
                 <li (click)="navigate('stats')">
                     <ion-button shape="round" fill="outline" [ngClass]="{'active': currentRoute == 'stats'}">
+                         <i class="abarras-stats"></i>
                     </ion-button>
                     Estadisticas
                 </li>
                 <li (click)="navigate('sell')">
                     <ion-button shape="round" fill="outline" [ngClass]="{'active': currentRoute == 'sell'}">
+                         <i class="abarras-sell"></i>
                     </ion-button>
                     Ventas
                 </li>

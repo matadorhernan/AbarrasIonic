@@ -18,18 +18,16 @@ div.menu {
 	ion-button.option-item {
 		width: 100%;
 		--border-radius: 5px;
-		--border-color: transparent;
-		--background: #1C2427;
+		--border-color: #05c7f2;
+		--background: #05c7f234;
 		--color: white;
 	}
 
 	ion-button.loggout {
 		width: 100%;
 		--border-radius: 5px;
-		--border-color: transparent;
-		--background: #05c7f2;
-		--box-shadow: 0 0 60px 10px #05c7f263;
-		--background: linear-gradient(45deg, #05c7f2, #0ca0ef);
+		--border-color: #fd2146;
+		--background: #fd5f2134;
 		--color: white;
 	}
 }
