@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -17,7 +17,7 @@ import { StoreAddComponent } from '../../components/home/store/store-add/store-a
 @NgModule({
 	imports: [
 		CommonModule,
-		FormsModule,
+		ReactiveFormsModule,
 		IonicModule,
 		RouterModule.forChild([
 			{

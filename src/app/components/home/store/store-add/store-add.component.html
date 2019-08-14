@@ -1,3 +1,22 @@
-<p>
-  store-add works!
-</p>
+<div class="add">
+  <div class="wrapper">
+    <ion-button class="abarras-back" shape="round" size="small">Atras</ion-button>
+    <h2> Agregar un producto </h2>
+  </div>
+  <form [formGroup]="productForm">
+    <ion-item lines="none">
+      <ion-input type="text" formControlName="name" placeholder="Nombre de producto"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input type="text" formControlName="upc" placeholder="Codigo UPC"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input type="text" formControlName="upc" placeholder="Precio"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-textarea type="text" formControlName="description" placeholder="Descripcion de producto (Opcional)">
+      </ion-textarea>
+    </ion-item>
+    <ion-button shape="round" fill="outline">Guardar Producto</ion-button>
+  </form>
+</div>

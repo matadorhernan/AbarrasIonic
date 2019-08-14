@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import { LoadingService } from '../../../services/loading.service';
+import { ScreenService } from '../../../services/screen.service';
 
 @Component({
 	selector: 'app-store',
@@ -10,16 +10,17 @@ import { LoadingService } from '../../../services/loading.service';
 })
 export class StoreComponent implements OnInit {
   
-	constructor(private router: Router, private loadingService: LoadingService) {}
+	constructor(private router: Router, private screenService: ScreenService) {}
 
 	ngOnInit() {}
 
 	public navigate(childPage: string) {
-		this.loadingService.homeLoading.next(true);
+		this.screenService.homeLoading.next(true);
 		this.router.navigateByUrl(`/home/(home:store/${childPage})`);
 
 		setTimeout(() => {
-			this.loadingService.homeLoading.next(false);
+			this.screenService.homeLoading.next(false);
+			this.screenService.homeSubMenu.next(true);
 		}, 300);
 	}
 }

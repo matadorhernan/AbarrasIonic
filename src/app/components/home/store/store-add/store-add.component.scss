@@ -1,0 +1,75 @@
+div.add {
+
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: 30px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+    align-items: center;
+
+.wrapper{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+	h2 {
+
+		color: white;
+		font-size: 15px;
+		padding-bottom: 15px;
+    }
+
+    .abarras-back{
+        
+        --padding-start: 0px;
+        --padding-end: 0px;
+        margin-right: 20px;
+    }
+}
+
+    
+    form {
+
+        overflow-y: auto;
+
+        padding: 30px;
+
+        border-radius: 5px;
+        background: #1D2528;
+        width: 100%;
+        height: 100%;
+        
+        ion-item {
+
+            font-size: 15px;
+            margin-bottom: 30px;
+    
+            --padding-start: 0px;
+            --ion-background-color: transparent;
+            --ion-text-color: #ffffff;
+    
+            --highlight-height: 2px;
+    
+            border-bottom: 1px solid #ffffff;
+    
+            &:focus-within {
+                border-bottom: 3px solid #ffffff;
+            }
+        }
+        
+        ion-button {
+            width: 100%;
+        --border-radius: 5px;
+        --border-color: #05c7f2;
+        --background: #05c7f234;
+        --color: white;
+        }
+    }
+
+}

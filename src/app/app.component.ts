@@ -24,7 +24,6 @@ export class AppComponent {
 	) {
 		this.initializeApp();
 		authService.loggedIn.subscribe(loggedIn => {
-			console.log(loggedIn);
 			this.loggedIn = loggedIn;
 		});
 	}

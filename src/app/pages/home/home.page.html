@@ -10,7 +10,7 @@
         <ion-button class="abarras-status" shape="round" size="small">{{statusText}}</ion-button>
     </nav>
     <section class="main">
-        <nav class="sub-navbar">
+        <nav class="sub-navbar" [hidden]="subMenuTab">
             <ul>
                 <li (click)="navigate('store')">
                     <ion-button shape="round" fill="outline" [ngClass]="{'active': currentRoute == 'store'}">
